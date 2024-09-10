@@ -1,0 +1,301 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "version": 2,
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "leading_diamond": "\u256d\u2500\ue0b6",
+            "style": "diamond",
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "properties": {
+              "macos": "\uf179 ",
+              "ubuntu": "\uf31b ",
+              "windows": "\ue62a "
+            },
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+            "type": "os"
+          },
+          {
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "style": "powerline",
+            "template": " {{ .UserName }}@{{ .HostName }} ",
+            "type": "session"
+          },
+          {
+            "background": "#2B4FFF",
+            "foreground": "#ffffff",
+            "properties": {
+              "branch_icon": "\ue725 ",
+              "fetch_stash_count": true,
+              "fetch_status": true,
+              "fetch_upstream_icon": true,
+              "fetch_worktree_count": true
+            },
+            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+            "type": "git"
+          },
+          {
+            "background": "#905AFF",
+            "foreground": "#ffffff",
+            "powerline_symbol": "\uE0B0",
+            "properties": {
+              "style": "full"
+            },
+            "style": "powerline",
+            "template": " {{ .Path }} ",
+            "type": "path"
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "right",
+        "segments": [
+          {
+            "type": "executiontime",
+            "leading_diamond": "\ue0b2",
+            "style": "diamond",
+            "background": "#905AFF",
+            "foreground": "#ffffff",
+            "template": " {{ .FormattedMs }} ",
+            "properties": {
+              "threshold": 500,
+              "style": "austin",
+              "always_enabled": true
+            }
+          },
+          {
+            "background": "#2B4FFF",
+            "foreground": "#ffffff",
+            "invert_powerline": true,
+            "powerline_symbol": "\ue0b2",
+            "properties": {
+              "display_mode": "files",
+              "fetch_virtual_env": false
+            },
+            "style": "powerline",
+            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
+            "type": "python"
+          },
+          {
+            "type": "kubectl",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "foreground": "#2B4FFF",
+            "background": "#ffffff",
+            "template": " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+            "properties": {
+              "context_aliases": {
+                "arn:aws:eks:eu-west-1:1234567890:cluster/posh": "posh"
+              }
+            }
+          },
+          {
+            "type": "docker",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "foreground": "#2B4FFF",
+            "background": "#ffffff",
+            "template": "  {{ .Context }} "
+          },
+          {
+            "background": "#a7cae1",
+            "foreground": "#100e23",
+            "powerline_symbol": "",
+            "template": " Helm {{ .Version }}",
+            "style": "powerline",
+            "type": "helm"
+          },
+          {
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "style": "powerline",
+            "leading_diamond": "\ue0b2",
+             "template": " \ue266  MEM: {{ round .PhysicalPercentUsed .Precision }}% | {{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB \ue266 ",
+             "trailing_diamond": "<transparent,#516BEB>\ue0b2</>",
+             "type": "sysinfo"
+          }
+          ]
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#2B4FFF",
+            "style": "plain",
+            "template": "\u2570\u2500",
+            "type": "text"
+          },
+          {
+            "foreground": "#905AFF",
+            "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"],
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "template": " λ",
+            "type": "status"
+          }
+        ],
+        "type": "prompt"
+      }
+    
+    ]
+  }{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "version": 2,
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "leading_diamond": "\u256d\u2500\ue0b6",
+            "style": "diamond",
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "properties": {
+              "macos": "\uf179 ",
+              "ubuntu": "\uf31b ",
+              "windows": "\ue62a "
+            },
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+            "type": "os"
+          },
+          {
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "style": "powerline",
+            "template": " {{ .UserName }}@{{ .HostName }} ",
+            "type": "session"
+          },
+          {
+            "background": "#2B4FFF",
+            "foreground": "#ffffff",
+            "properties": {
+              "branch_icon": "\ue725 ",
+              "fetch_stash_count": true,
+              "fetch_status": true,
+              "fetch_upstream_icon": true,
+              "fetch_worktree_count": true
+            },
+            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+            "type": "git"
+          },
+          {
+            "background": "#905AFF",
+            "foreground": "#ffffff",
+            "powerline_symbol": "\uE0B0",
+            "properties": {
+              "style": "full"
+            },
+            "style": "powerline",
+            "template": " {{ .Path }} ",
+            "type": "path"
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "right",
+        "segments": [
+          {
+            "type": "executiontime",
+            "leading_diamond": "\ue0b2",
+            "style": "diamond",
+            "background": "#905AFF",
+            "foreground": "#ffffff",
+            "template": " {{ .FormattedMs }} ",
+            "properties": {
+              "threshold": 500,
+              "style": "austin",
+              "always_enabled": true
+            }
+          },
+          {
+            "background": "#2B4FFF",
+            "foreground": "#ffffff",
+            "invert_powerline": true,
+            "powerline_symbol": "\ue0b2",
+            "properties": {
+              "display_mode": "files",
+              "fetch_virtual_env": false
+            },
+            "style": "powerline",
+            "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
+            "type": "python"
+          },
+          {
+            "type": "kubectl",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "foreground": "#2B4FFF",
+            "background": "#ffffff",
+            "template": " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+            "properties": {
+              "context_aliases": {
+                "arn:aws:eks:eu-west-1:1234567890:cluster/posh": "posh"
+              }
+            }
+          },
+          {
+            "type": "docker",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "foreground": "#2B4FFF",
+            "background": "#ffffff",
+            "template": "  {{ .Context }} "
+          },
+          {
+            "background": "#a7cae1",
+            "foreground": "#100e23",
+            "powerline_symbol": "",
+            "template": " Helm {{ .Version }}",
+            "style": "powerline",
+            "type": "helm"
+          },
+          {
+            "background": "#1A1A1A",
+            "foreground": "#ffffff",
+            "style": "powerline",
+            "leading_diamond": "\ue0b2",
+             "template": " \ue266  MEM: {{ round .PhysicalPercentUsed .Precision }}% | {{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB \ue266 ",
+             "trailing_diamond": "<transparent,#516BEB>\ue0b2</>",
+             "type": "sysinfo"
+          }
+          ]
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#2B4FFF",
+            "style": "plain",
+            "template": "\u2570\u2500",
+            "type": "text"
+          },
+          {
+            "foreground": "#905AFF",
+            "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"],
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "template": " λ",
+            "type": "status"
+          }
+        ],
+        "type": "prompt"
+      }
+    
+    ]
+  }

@@ -13,6 +13,7 @@ source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # Custom files
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
+[[ -f ~/.zsh/secrets.zsh ]] && source ~/.zsh/secrets.zsh
 
 # Poetry
 export PATH="/$HOME/.local/bin:$PATH"
@@ -33,6 +34,9 @@ export PATH="/Users/asafe/.antigravity/antigravity/bin:$PATH"
 
 # Added by Antigravity CLI installer
 export PATH="/Users/asafe/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/asafe/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="/Users/asafe/.antigravity-ide/antigravity-ide/bin:$PATH"

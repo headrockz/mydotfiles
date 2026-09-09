@@ -1,0 +1,13 @@
+default_profile = "prd-postgres"
+[profiles.prd-postgres]
+adapter = "postgres"
+theme = "dracula"
+limit = 1000
+host = "${POSTGRES_PRD_HOST}"
+user = "${POSTGRES_PRD_USER}"
+password = "${POSTGRES_PRD_PASSWORD}"
+dbname = "postgres"
+keymap_name = ["vscode"]
+show_files = "~/projects"
+
+

@@ -13,12 +13,15 @@ This repository holds my dotfiles and configurations.
 
 ## Repository Structure
 
+- `.config/`: Contains configuration files for various tools.
+- `.ssh/`: Contains SSH configurations.
 - `.zsh/`: Contains modular Zsh configurations.
   - `aliases.zsh`: Shell aliases.
   - `functions.zsh`: Custom shell functions.
+- `misc/`: misc or old configurations (Oh-My-Zsh, Powerlevel10k, etc..).
+- `setup/`: setup instructions for different environments.
 - `.zshrc`: Main Zsh configuration.
 - `my_posh_config.omp.json`: Oh-my-posh theme configuration.
-- `archive/`: Old or alternative configurations (Oh-My-Zsh, Powerlevel10k).
 - `setup.sh`: Installation script.
 
 ## How to use

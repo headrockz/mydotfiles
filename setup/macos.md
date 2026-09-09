@@ -36,3 +36,19 @@ This document contains the CLI tools and applications installed on macOS and com
 - pyenv
 - yt-dlp
 - zsh
+
+## Apps
+
+- antigravity
+- antigravity-ide
+- bitwarden
+- brave
+- bruno
+- chatgpt
+- flameshot
+- gemini
+- obsidian
+- rectangle
+- syncthing
+- tailscale
+- vscode
